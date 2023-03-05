@@ -1,0 +1,201 @@
+body {
+    height: 100vh;
+    background: center;
+    background-size: cover;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-family: 'Ubuntu', sans-serif; 
+}
+
+.slide-left {
+    animation: slideleft 2s;
+}
+
+@keyframes slideleft {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+}
+  
+
+#login-container{
+    width:100%;
+    height:100%;
+    position:relative;
+}
+
+#login-card{
+    border-radius: 10px;
+    width:600px;
+    height:250px;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    position:relative;
+    background-color: #ffffff;
+    background-color: rgba( 255, 255, 255, 0.7 );
+}
+
+#login-form{
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    /* transform: translate(-50%, -50%); */
+}
+
+#greeting{
+    font-size: 30px;
+    position: absolute;
+    left:50%;
+    top:60%;
+    transform: translate(-50%, -50%);
+}
+
+.hidden {
+    display: none;
+}
+
+input {
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#clock{
+    font-size: 70px;
+    position: absolute;
+    left:50%;
+    top:10%;
+    transform: translate(-50%, -50%);
+}
+
+#quotes{
+    text-align: center;
+    position: fixed;
+    left: 50%;
+    top:70%;
+    transform: translateX(-50%);
+    bottom: 0;
+}
+
+#author{
+    font-weight: bold;
+    font-size: 35px;
+    color: whitesmoke;
+}
+
+#quote{
+    font-size: 20px;
+    color: whitesmoke;
+}
+
+#title{
+    font-size: 60px;
+    text-align: center;
+    color: whitesmoke;
+    position: absolute;
+    left:50%;
+    top:30%;
+    transform: translate(-50%, -50%);
+}
+
+#todo-form{
+    position: absolute;
+    left:50%;
+    top:70%;
+    transform: translate(-50%, -50%);
+}
+
+#todo-input{
+    text-align: center;
+    width : 400px;
+    overflow: hidden;
+}
+
+#show-todo{
+    position: absolute;
+    left:50%;
+    top:90%;
+    transform: translate(-50%, -50%);
+}
+
+button {
+    margin: 20px;
+}
+
+.custom-btn {
+    width: 130px;
+    height: 40px;
+    color: #000;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+  }
+  .btn-15 {
+    width: 150px;
+    background: #DCEBFF;
+    border: none;
+    z-index: 1;
+  }
+  .btn-15:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    background-color: #464646;
+    border-radius: 5px;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    transition: all 0.3s ease;
+  }
+  .btn-15:hover {
+    color: #fff;
+  }
+  .btn-15:hover:after {
+    left: 0;
+    width: 100%;
+  }
+  .btn-15:active {
+    top: 2px;
+  }
+
+  #weather{
+    text-align: center;
+    position: absolute;
+    right:90%;
+    top:10%;
+  }
+
+  #city{
+    font-size: 25px;
+    color: #fff;
+  }
+
+  #weatherContainer{
+    font-size: 15px;
+    color: #fff;
+  }
+
+  #todo-list{
+    text-align: center;
+    position: absolute;
+    right:20%;
+    top:60%;
+  }
