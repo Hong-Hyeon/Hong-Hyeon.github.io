@@ -2,8 +2,9 @@ const todoForm = document.querySelector("#todo-form");
 const todoInput = document.querySelector("#todo-form input");
 const todoButton = document.querySelector("#todo-button");
 const todoButtonContainer = document.querySelector("#show-todo");
-const toDoList = document.querySelector("#todo-list")
-const todoAdd = document.querySelector("#todo-add")
+
+const todoList_card = document.querySelector("#todoList-card")
+const toDoList = document.querySelector("#todoList-data")
 
 const TODOS_KEY = 'todos'
 
@@ -52,9 +53,28 @@ function handleToDoSubmit(event){
     saveToDos();
 }
 
-// function handleShowTODO(){
+function handleShowTODO(newTodoObj){
+    if (todoList_card.classList[0] === "hidden"){
+        todoList_card.classList.remove("hidden")
+        todoList_card.style.display="block";
 
-// }
+        const savedToDos = localStorage.getItem(TODOS_KEY);
+
+        if(savedToDos !== null){
+            const parsedToDos=JSON.parse(savedToDos);
+            toDos = parsedToDos;
+            parsedToDos.forEach(paintToDo);
+        }
+
+    } else if (todoList_card.classList[0] === undefined){
+        todoList_card.classList.add("hidden")
+        todoList_card.style.display="none";
+
+        toDoList.innerHTML='';
+
+    }
+    // console.log(todoList_card.classList[0])
+}
 
 function todoFind(){
     const target = document.querySelector("#login-form");
@@ -65,12 +85,7 @@ function todoFind(){
     }
 }
 todoFind();
+setInterval(todoFind, 1000)
 
 todoForm.addEventListener("submit", handleToDoSubmit)
-const savedToDos = localStorage.getItem(TODOS_KEY);
-
-if(savedToDos !== null){
-    const parsedToDos=JSON.parse(savedToDos);
-    toDos = parsedToDos;
-    parsedToDos.forEach(paintToDo);
-}
+todoButton.addEventListener("click", handleShowTODO)

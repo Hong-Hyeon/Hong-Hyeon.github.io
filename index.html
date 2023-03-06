@@ -36,11 +36,18 @@
             </div>
         </div>
 
-        <div id="todo-form" class="hidden">
+        <form id="todo-form" class="hidden">
             <input id="todo-input" type="text" placeholder="ADD TODO LIST" required />
-            <input id="todo-add" type="submit" value="등록">
+        </form>
+
+        <div id="todo-list">
+            <div id="todoList-card" class="hidden">
+                <h1 id="card-header">TODO List</h1>
+                <div id="card-data">
+                    <ul id="todoList-data"></ul>
+                </div>
+            </div>
         </div>
-        <ul id="todo-list"></ul>
 
         <div id="quotes" class="hidden">
             <h2 id="author"></h2>
@@ -48,7 +55,6 @@
         </div>
 
         <div id="show-todo" class="hidden">
-            <!-- <button>Show TODO List</button> -->
             <button id="todo-button" class="custom-btn btn-15">Show TODO List</button>
         </div>
 
